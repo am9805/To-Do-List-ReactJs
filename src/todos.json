@@ -1,0 +1,22 @@
+{
+    "todos":[
+        {    
+        "title": "Task 1",
+        "responsable": "More",
+        "description":"Escalar Kaskey a LATAM :v",
+        "priority":"high"
+        },
+        {   
+            "title": "Task 2",
+            "responsable": "Alejo",
+            "description":"Hacer lab de arqui :v",
+            "priority":"high"
+        },
+        {    
+            "title": "Task 3",
+            "responsable": "Angelica",
+            "description":"Aprender React ya",
+            "priority":"high"
+        }
+    ]
+}
