@@ -15,7 +15,15 @@ class App extends Component {
     this.state = {
       todos: todos
     }
+    this.handleAddTodo= this.handleAddTodo.bind(this);
   }
+
+  //Recibe una tarea por parametro y se la actualiza al todo de arriba
+  handleAddTodo(todo){
+    this.setState({
+        todos:[...this.state.todos, todo] // UNo la tarea nueva a el arreglo de todo
+    })
+}
 
   render() {
     //ESto es un arreglo
