@@ -4,7 +4,7 @@ import './App.css';
 
 import { todos } from './todos.json';
 import TodoForm from './components/TodoForm';
-
+import ReactCountryFlag from "react-country-flag";
 
 class App extends Component {
   constructor() {
@@ -13,7 +13,8 @@ class App extends Component {
     super();
     //Voy a crear el estado de este componente
     this.state = {
-      todos: todos
+      todos: todos,
+      country: "co"
     }
     this.handleAddTodo= this.handleAddTodo.bind(this);
   }
@@ -60,12 +61,35 @@ class App extends Component {
 
           <div className="col-md-4 text-center">
             <img src={logo} className="App-logo" alt="logo" />
+            <ReactCountryFlag 
+                    styleProps={{
+                        width: '20px',
+                        height: '20px',
+                        margin: '5px'
+
+                    }}
+                    code={this.state.country}
+                    svg
+                />
             <TodoForm onAddTodo={this.handleAddTodo}></TodoForm>
           </div>
 
           <div className="col-md-8">
             <div className="row">
               {todos}
+            </div>
+            <div className="row">
+            <ReactCountryFlag 
+                    styleProps={{
+                        width: '20px',
+                        height: '20px',
+                        margin: '10px'
+                    }}
+                    code={this.state.country}
+                    svg
+                />
+            
+            
             </div>
           </div>
         </div>
